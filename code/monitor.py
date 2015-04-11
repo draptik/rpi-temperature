@@ -86,7 +86,7 @@ def get_temp_wu():
         curs.execute(query)
         rows = curs.fetchall()
 
-        print(rows)
+        #print(rows)
 
         conn.close()
 
