@@ -29,7 +29,9 @@ SAMPLE = 10 * 60
 
 
 def log_temperature(temp):
-    """Store the temperature in the database"""
+    """
+    Store the temperature in the database.
+    """
     
     conn = sqlite3.connect(dbname)
     curs = conn.cursor()
@@ -41,9 +43,11 @@ def log_temperature(temp):
 
     
 def get_temp():
-    """Retrieves the temperature from the sensor.
+    """
+    Retrieves the temperature from the sensor.
 
-    Returns -100 on error, or the temperature as a float."""
+    Returns -100 on error, or the temperature as a float.
+    """
 
     global ser
 
@@ -76,7 +80,9 @@ def get_temp():
 
 
 def get_temp_wu():
-    """Retrieves temperature(s) from weather underground (wu) and stores it to the database"""
+    """
+    Retrieves temperature(s) from weather underground (wu) and stores it to the database
+    """
 
     try:
         conn = sqlite3.connect(dbname)
@@ -111,7 +117,9 @@ def get_temp_wu():
 
          
 def main():
-    """Program starts here."""
+    """
+    Program starts here.
+    """
     
     get_temp_wu()
     t = threading.Timer(SAMPLE, get_temp_wu)
