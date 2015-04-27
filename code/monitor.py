@@ -25,7 +25,7 @@ TIMEOUT = 30
 WUKEY = ''
 STATION = ''
 # time between weather underground samples in seconds
-SAMPLE = 10 * 60
+SAMPLE = 30 * 60
 
 
 def log_temperature(temp):
