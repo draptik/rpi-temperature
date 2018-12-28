@@ -40,7 +40,7 @@ def log_temperature(temp):
     curs.execute("INSERT INTO temps values(datetime('now', 'localtime'), '{0}', '{1}' )".format(temp['temperature'], temp['id']))
 
     ## The 'temperatures' table has an ID and stores the timestamp as a datetime (instead of a string).
-    curs.execute("INSERT INTO temperatures values(datetime('now', 'localtime'), '{0}', '{1}' )".format(temp['temperature'], temp['id']))
+    #curs.execute("INSERT INTO temperatures values(datetime(null, 'now', 'localtime'), '{0}', '{1}' )".format(temp['temperature'], temp['id']))
 
     conn.commit()
     conn.close()
